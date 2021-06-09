@@ -1,69 +1,25 @@
 class Solution {
 public:
     int romanToInt(string s) {
-         int i = 0;
+        if (s.empty()) {
+            return 0;
+        }
+        int right[26] = {};
+        right['I' - 'A'] = 1;
+        right['V' - 'A'] = 5;
+        right['X' - 'A'] = 10;
+        right['L' - 'A'] = 50;
+        right['C' - 'A'] = 100;
+        right['D' - 'A'] = 500;
+        right['M' - 'A'] = 1000;
         int result = 0;
-        while (i < s.size()) {
-            if (s[i] == 'M') {
-                result += 1000;
-                i += 1;
-                continue;
-            }
-            if (s[i] == 'D') {
-                result += 500;
-                i += 1;
-                continue;
-            }
-            if (s[i] == 'C') {
-                if (s[i + 1] == 'D') {
-                    result += 400;
-                    i += 2;
-                } else if (s[i + 1] == 'M') {
-                    result += 900;
-                    i += 2;
-                } else {
-                    result += 100;
-                    i += 1;
-                }
-                continue;
-            }
-            if (s[i] == 'L') {
-                result += 50;
-                i += 1;
-                continue;
-            }
-            if (s[i] == 'X') {
-                if (s[i + 1] == 'L') {
-                    result += 40;
-                    i += 2;
-                } else if (s[i + 1] == 'C') {
-                    result += 90;
-                    i += 2;
-                } else {
-                    result += 10;
-                    i += 1;
-                }
-                continue;
-            }
-            if (s[i] == 'V') {
-                result += 5;
-                i += 1;
-                continue;
-            }
-            if (s[i] == 'I') {
-                if (s[i + 1] == 'V') {
-                    result += 4;
-                    i += 2;
-                } else if (s[i + 1] == 'X') {
-                    result += 9;
-                    i += 2;
-                } else {
-                    result += 1;
-                    i += 1;
-                }
-                continue;
+        for (int i = 0; i < (s.size() - 1); ++i) {
+            if (right[s[i] - 'A'] < right[s[i + 1] - 'A']) {
+                result -= right[s[i] - 'A'];
+            } else {
+                result += right[s[i] - 'A'];
             }
         }
-        return result;
+        return result + right[s.back() - 'A'];
     }
 };

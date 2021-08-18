@@ -18,4 +18,5 @@
 |0035|[Search Insert Position](https://leetcode.com/problems/search-insert-position)|[README]()|[C++](https://github.com/liujianfengv/LeetCode/blob/main/src/Search%20Insert%20Position.cpp)|
 |0036|[Valid Sudoku](https://leetcode.com/problems/valid-sudoku)|[README]()|[C++](https://github.com/liujianfengv/LeetCode/blob/main/src/Valid%20Sudoku.cpp)|
 |0039|[Combination Sum](https://leetcode.com/problems/combination-sum)|[README]()|[C++](https://github.com/liujianfengv/LeetCode/blob/main/src/Combination%20Sum.cpp)|
+|0096|[Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees)|[README]()|[C++](https://github.com/liujianfengv/LeetCode/blob/main/src/96UniqueBinarySearchTrees.cpp)|
 |0101|[Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)|[README]()|[C++](https://github.com/liujianfengv/LeetCode/blob/main/src/101SymmetricTree.cpp)|

@@ -1,2 +1,2 @@
 # Notes
-My LeetCode solution and notes
+My LeetCode solutions and notes
